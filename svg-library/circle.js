@@ -19,10 +19,30 @@ class Circle extends Svg {
 //test code
 let circle = new Circle(25, ".target");
 let attr = [50, 50];
+
+let { circumference } = circle;
 circle.createCircle(...attr);
-// const circle = document.querySelector("circle");
-// const radius = circle.getAttribute("r");
-// const circumference = 2 * radius * Math.PI;
-// console.log(circumference);
-// circle.setAttribute("stroke-dasharray", `${circumference}`);
-// console.log(circle.getAttribute("stroke-dasharray"));
+let el = document.getElementById(`${circle.id}`).firstElementChild;
+console.log(el);
+el.setAttribute("stroke-dasharray", `${circumference.toFixed(2)}`);
+let dashArrayVal = el.getAttribute("stroke-dasharray");
+let dashOffsetVal = el.getAttribute("stroke-dasharray");
+console.log(dashArrayVal - dashOffsetVal);
+class Timer {
+  start() {
+    this.timerID = setInterval(this.tick, 10);
+  }
+
+  tick() {
+    if (dashArrayVal > 0) {
+      el.setAttribute("stroke-dashoffset", `${dashOffsetVal - dashArrayVal}`);
+      dashArrayVal -= 0.5;
+      console.log(dashArrayVal);
+    } else {
+      el.setAttribute("stroke-dashoffset", `${circumference}`);
+      clearInterval(this.timerID);
+    }
+  }
+}
+
+let clock = new Timer();
