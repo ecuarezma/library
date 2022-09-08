@@ -1,10 +1,3 @@
-// const circle = document.querySelector("circle");
-// const radius = circle.getAttribute("r");
-// const circumference = 2 * radius * Math.PI;
-// console.log(circumference);
-// circle.setAttribute("stroke-dasharray", `${circumference}`);
-// console.log(circle.getAttribute("stroke-dasharray"));
-
 class Circle extends Svg {
   constructor(radius, target) {
     super(target);
@@ -23,6 +16,13 @@ class Circle extends Svg {
   }
 }
 
+//test code
 let circle = new Circle(25, ".target");
 let attr = [50, 50];
 circle.createCircle(...attr);
+// const circle = document.querySelector("circle");
+// const radius = circle.getAttribute("r");
+// const circumference = 2 * radius * Math.PI;
+// console.log(circumference);
+// circle.setAttribute("stroke-dasharray", `${circumference}`);
+// console.log(circle.getAttribute("stroke-dasharray"));

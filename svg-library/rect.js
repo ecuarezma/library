@@ -19,6 +19,6 @@ class Rect extends Svg {
     this.svgEl.innerHTML = attr;
   }
 }
-
+//test code
 let rect = new Rect(50, 50, ".target");
 rect.createRect(25, 25);
