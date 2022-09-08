@@ -1,0 +1,15 @@
+.target {
+  display: flex;
+}
+
+circle,
+rect {
+  fill: transparent;
+}
+
+circle {
+  stroke: red;
+}
+rect {
+  stroke: blue;
+}
