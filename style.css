@@ -9,6 +9,8 @@ rect {
 
 circle {
   stroke: red;
+  transform-origin: center;
+  transform: rotate(-90deg);
 }
 rect {
   stroke: blue;
