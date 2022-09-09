@@ -27,4 +27,4 @@ el.setAttribute("stroke-dasharray", `${circumference.toFixed(2)}`);
 let dashArrayVal = el.getAttribute("stroke-dasharray");
 let dashOffsetVal = el.getAttribute("stroke-dasharray");
 
-let animation = new Animate();
+// let animation = new Animate();
