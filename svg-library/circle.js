@@ -2,7 +2,8 @@ class Circle extends Svg {
   constructor(radius, target) {
     super(target);
     this.radius = radius;
-    this.circumference = 2 * this.radius * Math.PI;
+    this.perimeter = 2 * this.radius * Math.PI;
+    //yes it's technically circumference but then it won't work with reusable codeeeeeeee...
   }
   createCircle(x = "0", y = "0") {
     this.createViewBox();
@@ -19,12 +20,5 @@ class Circle extends Svg {
 //test code
 let circle = new Circle(25, ".target");
 let attr = [50, 50];
-
-let { circumference } = circle;
 circle.createCircle(...attr);
-let el = document.getElementById(`${circle.id}`).firstElementChild;
-el.setAttribute("stroke-dasharray", `${circumference.toFixed(2)}`);
-let dashArrayVal = el.getAttribute("stroke-dasharray");
-let dashOffsetVal = el.getAttribute("stroke-dasharray");
-
-// let animation = new Animate();
+circle.createAnimation(5);
