@@ -22,3 +22,4 @@ class Rect extends Svg {
 //test code
 let rect = new Rect(50, 50, ".target");
 rect.createRect(25, 25);
+rect.createAnimation(3);
